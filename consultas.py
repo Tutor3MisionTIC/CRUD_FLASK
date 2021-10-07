@@ -29,4 +29,28 @@ def mostrarCanciones():
   
 
 
+def eliminarCancion(nombre):
+    conn =  connetDataBase()
+
+    sql = f"DELETE FROM cancion WHERE nombre = {nombre};"
+    listC = []
+
+    try:
+        cursor =  conn.cursor()
+        print('Consultado')
+        cursor.execute(sql)
+        listC =  cursor.fetchall()
+        print(cursor.fetchall())
+        return listC
+
+    except Error as e:
+        print('Error: '+str(e))
+        return listC
+        
+
+
+    finally:
+        conn.close()
+
+  
 
