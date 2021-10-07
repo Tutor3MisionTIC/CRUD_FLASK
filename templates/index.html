@@ -1,7 +1,7 @@
 {% extends 'layout.html'%}
 
 {% block body %}
-<div class="container">
+<!-- <div class="container">
     <div class="abs-center">
 
         <table class="table table-hover table-dark tableFixHead">
@@ -20,15 +20,39 @@
                 <tr>
                     <td>{{can[1]}}</td>
                     <td>{{can[2]}}</td>
-                    <td><a class="btn btn-primary" target="black" href="{{can[3]}}" role="button">Ver en YouTube</a></td>
+                    <td><a class="btn btn-primary" target="black" href="{{can[3]}}" role="button">Ver en YouTube</a>
+                    </td>
                     <td><img src="{{can[4]}}" class="img-thumbnail" width="100px"></td>
                     <td><button type="button" class="btn btn-warning">Editar</button></td>
                     <td><button type="button" class="btn btn-danger">Eliminar</button></td>
                 </tr>
                 {% endfor %}
-              
+
             </tbody>
         </table>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row row-cols-4">
+
+        {% for can in canciones %}
+
+        <div class="col">
+
+            <div class="card" style="width: 18rem;">
+                <img src="{{can[4]}}" class="img-thumbnail" width="500px">
+                <div class="card-body">
+                    <h5 class="card-title">{{can[1]}}</h5>
+                    <p class="card-text">{{can[2]}}</p>
+                    <a href="{{can[3]}}" class="btn btn-primary">Ver en YouTube</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        {% endfor %}
 
     </div>
 </div>
