@@ -1,3 +1,7 @@
+CREATE DATABASE rockola;
+
+USE rockola;
+
 CREATE TABLE cancion (
 	id int not null,
     nombre varchar(100) NOT NULL,
