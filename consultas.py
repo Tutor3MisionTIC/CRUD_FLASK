@@ -14,7 +14,6 @@ def mostrarCanciones():
         print('Consultado')
         cursor.execute(sql)
         listC =  cursor.fetchall()
-        print(cursor.fetchall())
         return listC
 
     except Error as e:
@@ -40,7 +39,6 @@ def eliminarCancion(nombre):
         print('Consultado')
         cursor.execute(sql)
         listC =  cursor.fetchall()
-        print(cursor.fetchall())
         return listC
 
     except Error as e:

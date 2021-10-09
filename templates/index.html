@@ -33,6 +33,7 @@
     </div>
 </div> -->
 
+
 <div class="container">
     <div class="row row-cols-4">
 
@@ -46,16 +47,10 @@
                     <h5 class="card-title">{{can[1]}}</h5>
                     <p class="card-text">{{can[2]}}</p>
                     <div class="container">
-                        <div class="row row-cols-3">
-                            <div class="col">
-                                <a href="{{can[3]}}" class="btn btn-sm">Ver en YouTube</a>
-                            </div>
-                            <div class="col">
-                                <a href="{{can[3]}}" class="btn btn-warning">Editar</a>
-                            </div>
-                            <div class="col">
-                                <a href="{{can[3]}}" class="btn btn-danger">Eliminar</a>
-                            </div>
+                        <div class="btn-group">
+                            <a href="{{can[3]}}" class="btn btn-success" target="black">YouTube</a>
+                            <a href="editar" class="btn btn-warning" target="black">Editar</a>
+                            <a href="{{can[3]}}" class="btn btn-danger"target="black" >Eliminar</a>
                         </div>
                     </div>
                 </div>
